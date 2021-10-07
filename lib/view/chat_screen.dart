@@ -1,5 +1,6 @@
 import 'package:challenge/theme.dart';
 import 'package:challenge/view/chat_tile.dart';
+import 'package:challenge/view/my_chat.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -88,11 +89,54 @@ class _ChatScreenState extends State<ChatScreen> {
                       height: 30.0,
                     ),
                     ChatTile(
-                        chatImage: 'assets/images/member_1.png',
-                        chatText: 'How are ya guys?\ndadgwdg\dasgdvAJD',
-                        chatTime: '2.30')
+                        chatImage: 'assets/images/member_2.png',
+                        chatText: 'Fine here :p',
+                        chatTime: '3.11'),
+                    SizedBox(
+                      height: 30.0,
+                    ),
+                    MyChat(
+                        chatImage: 'assets/images/member_3.png',
+                        chatText:
+                            'Thinking about how to deal\nwith this client from Hell...',
+                        chatTime: '22.08'),
+                    SizedBox(
+                      height: 30.0,
+                    ),
+                    ChatTile(
+                        chatImage: 'assets/images/member_4.png',
+                        chatText: 'Love them',
+                        chatTime: '23.11')
                   ],
                 ),
+              ),
+            ),
+            Spacer(),
+            Container(
+              margin: EdgeInsets.all(30.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(100.0)),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Type message ...',
+                    style: lightGreyTextStyle.copyWith(
+                        fontSize: 16.0, fontWeight: FontWeight.w300),
+                  ),
+                  FloatingActionButton(
+                    onPressed: () {},
+                    child: const Icon(Icons.send),
+                    foregroundColor: darkBlueColor,
+                    backgroundColor: darkWhiteColor,
+                    mini: true,
+                    elevation: 0,
+                  ),
+                ],
               ),
             )
           ],
